@@ -18,7 +18,10 @@ app.use(cors());
 //use express middleware to connect this to our app
 app.use('/posts', postRoutes);
 
-// const CONNECTION_URL = 'mongodb+srv://mosmnn:mosmn144@cluster0.ebhlgfb.mongodb.net/?retryWrites=true&w=majority';
+app.get('/', (req, res) => {
+    res.send('Hello to GOLDs API');
+});
+
 const PORT = process.env.PORT || 5001;
 
 
